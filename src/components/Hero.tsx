@@ -1,10 +1,14 @@
+import { useState } from "react";
 import heroBg from "@/assets/hero-bg.jpg";
 import { MessageCircle, ArrowRight } from "lucide-react";
+import TravelPlanner from "./TravelPlanner";
 
 const WHATSAPP_URL =
   "https://wa.me/554835000975?text=Ol%C3%A1%2C%20gostaria%20de%20planejar%20minha%20pr%C3%B3xima%20viagem%20com%20a%20Vortex%20Viagens.";
 
 const Hero = () => {
+  const [plannerOpen, setPlannerOpen] = useState(false);
+
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background image */}
@@ -37,17 +41,13 @@ const Hero = () => {
           className="flex flex-col sm:flex-row items-center justify-center gap-4 opacity-0 animate-fade-in-up"
           style={{ animationDelay: "0.8s" }}
         >
-          <a
-            href="#contato"
+          <button
             className="inline-flex items-center gap-2 bg-primary-foreground text-foreground font-montserrat text-sm tracking-wider uppercase px-8 py-4 rounded-sm hover:bg-primary-foreground/90 transition-all duration-300"
-            onClick={(e) => {
-              e.preventDefault();
-              document.querySelector("#contato")?.scrollIntoView({ behavior: "smooth" });
-            }}
+            onClick={() => setPlannerOpen(true)}
           >
             Planejar minha viagem
             <ArrowRight size={16} />
-          </a>
+          </button>
           <a
             href={WHATSAPP_URL}
             target="_blank"
@@ -65,6 +65,8 @@ const Hero = () => {
         <div className="w-px h-12 bg-primary-foreground/40 mx-auto mb-2" />
         <p className="font-montserrat text-[10px] tracking-[0.3em] uppercase text-primary-foreground/50">Scroll</p>
       </div>
+
+      <TravelPlanner isOpen={plannerOpen} onClose={() => setPlannerOpen(false)} />
     </section>
   );
 };
