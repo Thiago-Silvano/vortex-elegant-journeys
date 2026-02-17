@@ -1,42 +1,20 @@
 import { useEffect, useRef, useState } from "react";
 import { Plane, Globe, Ship, Sparkles, MapPin, Shield } from "lucide-react";
+import ServiceModal from "./ServiceModal";
 
 const services = [
-  {
-    icon: Plane,
-    title: "Passagens Aéreas",
-    desc: "Emissão nacional e internacional com análise estratégica de tarifas.",
-  },
-  {
-    icon: Globe,
-    title: "Pacotes Internacionais",
-    desc: "Europa, Estados Unidos, Caribe, Ásia e destinos exclusivos.",
-  },
-  {
-    icon: Ship,
-    title: "Cruzeiros",
-    desc: "Experiências marítimas premium com suporte completo.",
-  },
-  {
-    icon: Sparkles,
-    title: "Disney & Orlando",
-    desc: "Planejamento inteligente para viagens em família.",
-  },
-  {
-    icon: MapPin,
-    title: "América do Sul",
-    desc: "Chile, Argentina, Peru e destinos incríveis a poucas horas do Brasil.",
-  },
-  {
-    icon: Shield,
-    title: "Seguro Viagem",
-    desc: "Proteção completa para sua tranquilidade.",
-  },
+  { icon: Plane, title: "Passagens Aéreas", desc: "Emissão nacional e internacional com análise estratégica de tarifas." },
+  { icon: Globe, title: "Pacotes Internacionais", desc: "Europa, Estados Unidos, Caribe, Ásia e destinos exclusivos." },
+  { icon: Ship, title: "Cruzeiros", desc: "Experiências marítimas premium com suporte completo." },
+  { icon: Sparkles, title: "Disney & Orlando", desc: "Planejamento inteligente para viagens em família." },
+  { icon: MapPin, title: "América do Sul", desc: "Chile, Argentina, Peru e destinos incríveis a poucas horas do Brasil." },
+  { icon: Shield, title: "Seguro Viagem", desc: "Proteção completa para sua tranquilidade." },
 ];
 
 const Services = () => {
   const ref = useRef<HTMLDivElement>(null);
   const [visible, setVisible] = useState(false);
+  const [activeService, setActiveService] = useState<string | null>(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -68,9 +46,10 @@ const Services = () => {
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {services.map((service, i) => (
-            <div
+            <button
               key={i}
-              className="group p-8 rounded-sm border border-border bg-background hover:bg-card transition-all duration-500 hover:shadow-lg"
+              onClick={() => setActiveService(service.title)}
+              className="group p-8 rounded-sm border border-border bg-background hover:bg-card transition-all duration-500 hover:shadow-lg text-left cursor-pointer"
             >
               <service.icon
                 size={28}
@@ -83,10 +62,12 @@ const Services = () => {
               <p className="font-montserrat text-sm text-muted-foreground leading-relaxed">
                 {service.desc}
               </p>
-            </div>
+            </button>
           ))}
         </div>
       </div>
+
+      <ServiceModal service={activeService} onClose={() => setActiveService(null)} />
     </section>
   );
 };
