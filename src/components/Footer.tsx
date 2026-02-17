@@ -40,13 +40,13 @@ const Footer = () => {
               Redes Sociais
             </h4>
             <a
-              href="https://instagram.com/vortexviagens"
+              href="https://instagram.com/vortexviagem"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 font-montserrat text-sm text-primary-foreground/60 hover:text-primary-foreground transition-colors"
             >
               <Instagram size={16} />
-              @vortexviagens
+              @vortexviagem
             </a>
           </div>
         </div>
