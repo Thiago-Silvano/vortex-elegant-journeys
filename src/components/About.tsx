@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-
+import fachadaImg from "@/assets/fachada.jpeg";
 const About = () => {
   const ref = useRef<HTMLDivElement>(null);
   const [visible, setVisible] = useState(false);
@@ -50,15 +50,12 @@ const About = () => {
             </p>
           </div>
 
-          <div className="bg-card rounded-sm aspect-[4/3] flex items-center justify-center border border-border">
-            <div className="text-center px-8">
-              <div className="w-16 h-px bg-accent mx-auto mb-4" />
-              <p className="font-playfair text-xl text-foreground mb-2">Vortex Viagens</p>
-              <p className="font-montserrat text-xs tracking-widest uppercase text-muted-foreground">
-                Fachada da agência
-              </p>
-              <div className="w-16 h-px bg-accent mx-auto mt-4" />
-            </div>
+          <div className="rounded-sm overflow-hidden aspect-[4/3]">
+            <img
+              src={fachadaImg}
+              alt="Fachada da agência Vortex Viagens no Nações Shopping, Criciúma"
+              className="w-full h-full object-cover"
+            />
           </div>
         </div>
       </div>
