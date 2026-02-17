@@ -62,8 +62,7 @@ const Hero = () => {
 
       {/* Scroll indicator */}
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 opacity-0 animate-fade-in" style={{ animationDelay: "1.2s" }}>
-        <div className="w-px h-12 bg-primary-foreground/40 mx-auto mb-2" />
-        <p className="font-montserrat text-[10px] tracking-[0.3em] uppercase text-primary-foreground/50">Scroll</p>
+        <div className="w-px h-12 bg-primary-foreground/40 mx-auto" />
       </div>
 
       <TravelPlanner isOpen={plannerOpen} onClose={() => setPlannerOpen(false)} />
