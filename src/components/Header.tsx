@@ -44,7 +44,7 @@ const Header = () => {
             <button
               key={link.href}
               onClick={() => handleClick(link.href)}
-              className={`font-montserrat text-sm tracking-widest uppercase transition-colors duration-300 ${scrolled ? "text-foreground hover:text-accent" : "text-muted-foreground hover:text-foreground"}`}
+              className={`font-montserrat text-sm tracking-widest uppercase transition-colors duration-500 ${scrolled ? "text-foreground hover:text-accent" : "text-primary-foreground/90 hover:text-primary-foreground"}`}
             >
               {link.label}
             </button>
@@ -53,7 +53,7 @@ const Header = () => {
 
         {/* Mobile toggle */}
         <button
-          className="md:hidden text-foreground"
+          className={`md:hidden transition-colors duration-500 ${scrolled ? "text-foreground" : "text-primary-foreground"}`}
           onClick={() => setMenuOpen(!menuOpen)}
           aria-label="Menu"
         >
