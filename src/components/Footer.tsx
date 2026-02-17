@@ -22,7 +22,7 @@ const Footer = () => {
             <ul className="space-y-3">
               <li className="flex items-center gap-3 font-montserrat text-sm text-primary-foreground/60">
                 <MapPin size={14} className="flex-shrink-0" />
-                Em frente à Polícia Federal
+                Rua Jorge Elias De Lucca, 677 - Nações Shopping - Sala 04 - Nossa Senhora da Salete, Criciúma - SC, 88813-901
               </li>
               <li className="flex items-center gap-3 font-montserrat text-sm text-primary-foreground/60">
                 <Phone size={14} className="flex-shrink-0" />

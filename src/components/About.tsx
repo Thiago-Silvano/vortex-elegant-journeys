@@ -41,7 +41,7 @@ const About = () => {
               estratégico, organização completa e acompanhamento personalizado.
             </p>
             <p className="font-montserrat text-muted-foreground leading-relaxed">
-              Localizada estrategicamente em frente à Polícia Federal, a Vortex
+              Localizada na Rua Jorge Elias De Lucca, 677 - Nações Shopping, em Criciúma, a Vortex
               consolidou sua reputação pela seriedade, transparência e
               compromisso com cada cliente.
             </p>
