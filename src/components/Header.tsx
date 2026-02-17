@@ -29,7 +29,7 @@ const Header = () => {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         scrolled
-          ? "bg-background/90 backdrop-blur-md shadow-sm"
+          ? "bg-background/95 backdrop-blur-md shadow-md border-b border-border"
           : "bg-transparent"
       }`}
     >
@@ -44,7 +44,7 @@ const Header = () => {
             <button
               key={link.href}
               onClick={() => handleClick(link.href)}
-              className="font-montserrat text-sm tracking-widest uppercase text-muted-foreground hover:text-foreground transition-colors duration-300"
+              className={`font-montserrat text-sm tracking-widest uppercase transition-colors duration-300 ${scrolled ? "text-foreground hover:text-accent" : "text-muted-foreground hover:text-foreground"}`}
             >
               {link.label}
             </button>
