@@ -55,6 +55,9 @@ const Footer = () => {
           <p className="font-montserrat text-xs text-primary-foreground/40 text-center">
             © {new Date().getFullYear()} Vortex Viagens. Todos os direitos reservados.
           </p>
+          <p className="font-montserrat text-xs text-primary-foreground/40 text-center mt-2">
+            CNPJ: 51.209.371/0001-19
+          </p>
         </div>
       </div>
     </footer>
