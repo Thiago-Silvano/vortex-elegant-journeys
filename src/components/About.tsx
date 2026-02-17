@@ -54,7 +54,7 @@ const About = () => {
             <img
               src={fachadaImg}
               alt="Fachada da agência Vortex Viagens no Nações Shopping, Criciúma"
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover object-top"
             />
           </div>
         </div>

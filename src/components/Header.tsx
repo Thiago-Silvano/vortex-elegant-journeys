@@ -35,7 +35,7 @@ const Header = () => {
     >
       <div className="container mx-auto flex items-center justify-between py-4 px-6 lg:px-12">
         <a href="#" className="flex items-center gap-2">
-          <img src={logoVortex} alt="Vortex Viagens" className="h-10 md:h-12 w-auto" />
+          <img src={logoVortex} alt="Vortex Viagens" className="h-14 md:h-16 w-auto" />
         </a>
 
         {/* Desktop nav */}
