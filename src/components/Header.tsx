@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
+import logoVortex from "@/assets/logo-vortex.png";
 
 const navLinks = [
   { label: "Sobre", href: "#sobre" },
@@ -33,8 +34,8 @@ const Header = () => {
       }`}
     >
       <div className="container mx-auto flex items-center justify-between py-4 px-6 lg:px-12">
-        <a href="#" className="font-playfair text-xl md:text-2xl font-bold tracking-wide text-foreground">
-          VORTEX <span className="font-light">VIAGENS</span>
+        <a href="#" className="flex items-center gap-2">
+          <img src={logoVortex} alt="Vortex Viagens" className="h-10 md:h-12 w-auto" />
         </a>
 
         {/* Desktop nav */}
