@@ -50,7 +50,7 @@ const photos = [
     src: expCroacia,
     location: "Dubrovnik, Croácia",
     caption: "Thiago",
-    quote: "Mais de 15 anos vivendo o mundo.",
+    quote: "Mais de 10 anos vivendo o mundo.",
   },
   {
     src: expDisney,
@@ -70,7 +70,7 @@ const pillars = [
   {
     icon: Globe,
     title: "Vivência Internacional",
-    text: "Mais de 15 anos morando fora do Brasil.",
+    text: "Mais de 10 anos morando fora do Brasil.",
   },
   {
     icon: Plane,
@@ -123,7 +123,7 @@ const RealExperiences = () => {
             Melhor Sua Viagem
           </h2>
           <p className="font-montserrat text-muted-foreground leading-relaxed">
-            Já moramos fora do Brasil por mais de 15 anos. Conhecemos
+            Já moramos fora do Brasil por mais de 10 anos. Conhecemos
             aeroportos, imigrações, conexões perdidas, hotéis problemáticos e
             experiências incríveis.
           </p>
